@@ -1,0 +1,133 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+navigator {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 40%;
+  display: inline-block;
+  margin-right: 25rpx;
+}
+#background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#mine,
+#setting {
+  width: 65rpx;
+  height: 65rpx;
+}
+.top-box {
+  position: absolute;
+  top: 35rpx;
+  left: 35rpx;
+  width: 300rpx;
+}
+#time-banner {
+  position: absolute;
+  height: 100rpx;
+  width: 250rpx;
+  bottom: 35rpx;
+  left: 35rpx;
+}
+#time {
+  display: block;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: rgb(239,198,15);
+}
+#time-all {
+  box-sizing: border-box;
+  position: absolute;
+  width: 250rpx;
+  height: 67rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255,255,255,0.5);
+  border: 1rpx solid rgba(50,50,50, 0.7);
+}
+#time-now {
+  box-sizing: border-box;
+  margin: 5rpx 7rpx;
+  width: 234rpx;
+  height: 55rpx;
+  border-radius: 48rpx;
+  border: 1rpx solid rgba(50,50,50, 0.7);
+  background-color: rgb(239,198,15);
+}
+#present {
+  position: absolute;
+  left: 230rpx;
+  top: 13vh;
+  z-index: 2;
+}
+#present-icon {
+  width: 120rpx;
+  height: 120rpx;
+}
+#bomb-icon {
+  position: absolute;
+  z-index: 3;
+  top: -20rpx;
+  left: -10rpx;
+  width: 130rpx;
+  height: 60rpx;
+}
+#car {
+  position: absolute;
+}
+#car-icon {
+  width: 140rpx;
+  height: 80rpx;
+}
+.target {
+  position: absolute;
+  height: 150rpx;
+  width: 170rpx;
+}
+
+#rect-icon {
+  display: block;
+  margin: 0 auto;
+  height: 7vh;
+  width: 7rpx;
+}
+
+.unfinished{
+  border: rgba(255,255,255, 0.5) 2rpx solid;
+  width: 170rpx;
+  height: 45rpx;
+  font-size: 33rpx;
+  font-weight: 100;
+  text-align: center;
+  color: rgh(255,255,255,0.8);
+  color: white;
+  background-color: rgb(38, 183, 169);
+}
+.finished{
+  border: rgba(255,255,255, 0.5) 2rpx solid;
+  width: 170rpx;
+  height: 45rpx;
+  font-size: 33rpx;
+  font-weight: 100;
+  text-align: center;
+  color: rgh(255,255,255,0.8);
+  color: white;
+  /* 与上面相比只有，background不同 */
+  background-color: rgb(38, 103, 169);
+}
+.dialog .weui-dialog{
+  background-color: rgb(255, 211, 30);
+  border: rgb(38, 183, 169) 3px solid;
+}
+.dialog .weui-dialog__bd {
+  font-weight: 900;
+  color: rgb(38, 183, 169);
+  font-size: 40rpx;
+}

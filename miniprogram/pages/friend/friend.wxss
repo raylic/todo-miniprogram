@@ -1,0 +1,189 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+.top{
+  position: relative;
+  width: 100%;
+  height: 70rpx;
+  color: rgb(38, 183, 169);
+}
+.plans {
+  position: absolute;
+  top: 370rpx;
+}
+.plan-single {
+  position: relative;
+  margin: 30rpx 20rpx;
+}
+.plan-body {
+  box-sizing: border-box;
+  height: 90rpx;
+  width: 710rpx;
+  font-size: 50rpx;
+  display: block;
+  margin: 0;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  letter-spacing: 3rpx;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: rgb(38, 183, 169);
+}
+#plan-finish {
+  background-color: rgb(121, 158, 155);
+  color: rgba(255,255,255,0.7);
+}
+.icon-container {
+  position: absolute;
+  left: 580rpx;
+  top: -20rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.finish-time{
+  position: absolute;
+  transform: rotate(-13deg);
+  color:#ffffff;
+  font-size: 20rpx;
+  font-weight: 200;
+  top: 50rpx;
+  width: 130rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+}
+.finish-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120rpx;
+  height: 120rpx;
+}
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.top-banner {
+  background-color:white;
+  width: 400rpx;
+  height: 140rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  position: absolute;
+  top: 30rpx;
+  left: 50rpx;
+}
+.top-banner > view {
+  display: inline-block;
+}
+.add-box {
+  position: absolute;
+  top: 0;
+  left: 220rpx;
+  background-color: rgb(135,178,175);
+  height: 100rpx;
+  width: 100rpx;
+}
+.add-icon {
+  height: 80rpx;
+  width: 80rpx;
+  margin: 10rpx;
+}
+.user-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120rpx;
+  width: 100rpx;
+}
+.top-banner > view > text {
+  position: absolute;
+  top: 100rpx;
+  left: -25rpx;
+  width: 150rpx;
+  text-align: center;
+  font-size: 33rpx;
+  color: rgb(159, 183, 181);
+  line-height: 1.2;
+}
+
+.user-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100rpx;
+  width: 100rpx;
+}
+.vs {
+  position: absolute;
+  top: 0;
+  left: 100rpx;
+  height: 100rpx;
+  width: 120rpx;
+}
+.vs-icon {
+  height: 80rpx;
+  width: 100rpx;
+  margin: 10rpx;
+}
+.friend-avatar {
+  position: absolute;
+  top: 0;
+  left: 220rpx;
+  height: 140rpx;
+  width: 100rpx;
+}
+.friend-avatar > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100rpx;
+  width: 100rpx;
+}
+.my-number {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: transparent;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+.unlink {
+  width: 150rpx;
+  height: 30rpx;
+  background-color: transparent;
+  position: absolute;
+  bottom: 10rpx;
+  left: 300rpx;
+}
+.add-dialog > .weui-dialog {
+  border-radius: 0;
+  border-top: 2px rgb(64,190,179) solid;
+}
+.add-dialog > .weui-dialog text{
+  margin-top: 20rpx;
+  font-family: "FZZHYJW";
+  color: rgb(123, 123, 123);
+  line-height: 1.2;
+}
+.add-dialog > .weui-dialog input {
+  height: 70rpx;
+  border-radius: 50rpx;
+  border: 2px solid rgb(64,190,179);
+  margin: 20rpx 10rpx 40rpx 10rpx;
+}
+.add-dialog > .weui-dialog button {
+  background-color: transparent;
+  height: 100rpx;
+  width: 200rpx;
+  font-size: 50rpx;
+  color: rgb(38, 181, 169);
+  line-height: 1.2;
+}
+
+
+.add-dialog  .weui-dialog__ft {
+  display: none;
+}
+

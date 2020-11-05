@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <image src="/images/bg.png" id="background"></image>
+  <view class="top-box">  
+      <navigator url="/pages/everyday/everyday"><image src="/images/setting-icon.png" id="setting"></image></navigator>
+      <navigator url="/pages/mine/mine"><image src="/images/mine-icon.png" id="mine"></image></navigator>
+      <navigator url="/pages/friend/friend"><image src="/images/friend-icon.png" id="setting"></image></navigator>
+  </view>
+  <view id="time-banner">
+    <text id="time">{{timePer}}</text>
+    <view id="time-all">
+      <view id="time-now" style="width:{{timeValue}};"></view>
+    </view>
+  </view>
+  <view id="present"  bindtap="setFinish">
+    <image wx:if="{{fireShow}}" src="/images/bomb.png" id="bomb-icon" />
+    <image src="/images/present.png" id="present-icon"/>
+  </view>
+  <view id="car" animation="{{animation}}" style="left: {{carPosition[0]}}; top: {{carPosition[1]}};" bindtap="reset">
+    <image src="{{isCarLeft ? '/images/car-left.png' : '/images/car-right.png'}}" id="car-icon" />
+  </view>
+
+  <view wx:for="{{shortPlans}}" wx:key="short" class="target"  style="top:{{vhs[index]}}; left:{{lefts[index]}}"  id="{{shortPlans.length-1-index}}">
+    <view class="{{plans[shortPlans.length-1-index].isFinished ? 'finished' : 'unfinished'}}" id="{{shortPlans.length-1-index}}" bindtap="setPlanFinish">{{shortPlans[shortPlans.length-1-index] != '' ? shortPlans[shortPlans.length-1-index] : '空计划' }}</view>
+    <image src="/images/rect.png" id="rect-icon" />
+  </view>
+</view>

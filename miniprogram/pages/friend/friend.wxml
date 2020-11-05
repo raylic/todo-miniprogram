@@ -1,0 +1,56 @@
+<view class="container">
+  <image src="/images/friend-bg.png" class="background" />
+
+  <view class="my-number" bindtap="setNumberShow"></view>
+  <view class="unlink" bindtap='unlinkShow'></view>
+
+  <view class="top-banner">
+    <view class="user-box">
+      <image src="{{userInfo.avatarUrl}}" class="user-avatar" />
+      <text>{{userInfo.nickName}}</text>
+    </view>
+
+    <view class="vs">
+      <image src="/images/vs.png" class="vs-icon" />
+    </view>
+    <view class="add-box" bindtap="setAddShow" wx:if="{{!hasFriend}}">
+      <image src="/images/friend-add.png" class="add-icon" />
+    </view>
+    <view class="friend-avatar" wx:if="{{hasFriend}}">
+      <image src="{{friendAvatar}}"/>
+      <text>{{friendName}}</text>
+    </view>
+  </view>
+
+  <view class="plans" wx:if="{{hasFriend}}">
+    <view class="plan-single" wx:for='{{friendinfo.plans}}' wx:key="plans">
+      <view class="plan-body" id="{{friendinfo.plans[index].isFinished ? 'plan-finish' : ''}}">{{friendinfo.plans[index].body}}</view>
+      <view class="icon-container" wx:if="{{friendinfo.plans[index].isFinished}}">
+        <image class="finish-icon" src="/images/finish-icon.png"/>
+        <view class="finish-time">{{friendinfo.plans[index].finishTime}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<mp-dialog show="{{numberShow}}" ext-class="add-dialog">
+    <form catchsubmit="setUerInfo">
+    我的暗号：<input name="password"/>
+    <button form-type="submit" plain="true" style="border:none;">确认</button>
+  </form>
+</mp-dialog>
+
+<mp-dialog show="{{addShow}}" ext-class="add-dialog">
+  <form catchsubmit="queryUserInfo" id="addForm">
+    <text>好友微信名</text>
+    <input name="nickname"/>
+    <text>好友暗号</text>
+    <input name="number"/>
+    <button form-type="submit" plain="true" style="border:none;">确认</button>
+  </form>
+</mp-dialog>
+
+<mp-dialog show="{{unlinkShow}}" ext-class="add-dialog">
+        <view>确定要解除与当前好友的联系吗</view>
+        <button bindtap="unlink" plain="true" style="border:none; margin-top: 50rpx;">确定</button>
+</mp-dialog>

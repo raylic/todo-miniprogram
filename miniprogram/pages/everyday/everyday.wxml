@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="top">
+    <view id="time">{{dateText}}</view>
+    <view id="right-border"></view>
+  </view>
+  
+  <view class="plan">
+    <text class="plan-text">计划</text>
+    <view wx:for="{{plans}}" wx:key="id" class="plan-single">
+      <input disabled="{{plans[index].isFinished}}" data-index="{{index}}" id='{{!plans[index].focus ? "plan-body-burl" : "plan-body-focus"}}'
+       bindfocus="focusPlan" value="{{item.body}}" bindblur="blurPlan" class="{{plans[index].isFinished ? 'plan-body-finished' : 'plan-body'}}" bindinput="updatePlan" />
+      <view class="plan-delete" wx:if="{{plans[index].focus}}" id="{{index}}" bindtap="deletePlan">
+        <image id="add-icon" src="/images/delete-icon.png"></image>
+      </view>
+    </view>
+    <view class="plan-body" id="plan-add" bindtap="{{plans.length < 8 ? 'addPlan' : 'alert'}}">
+      <image id="add-icon" src="/images/add-icon.png"></image>
+    </view>
+  </view>
+
+   <view class="plan">
+    <text class="plan-text">奖励</text>
+     <view class="plan-single">
+      <input id='{{!reward.focus ? "plan-body-burl" : "plan-body-focus"}}' style="width: 670rpx"
+       bindfocus="focusReward" bindblur="blurReward" value="{{reward.body}}" class="plan-body" bindinput="updateReward" />
+    </view>
+  </view>
+  
+  <view class="plan" id="time-setting">
+    <text class="plan-text">时间</text>
+    <picker-view class="time-range" value="{{time}}" bindchange="pickerChange">
+      <picker-view-column class="start">
+        <view wx:for="{{hours}}" wx:key="hours" >{{item}}时</view>
+      </picker-view-column>
+      <picker-view-column class="start">
+        <view wx:for="{{minutes}}" wx:key="minutes">{{item}}分</view>
+      </picker-view-column>
+
+      <view class="line"></view>
+      
+      <picker-view-column class="start">
+        <view wx:for="{{hours}}" wx:key="hours">{{item}}时</view>
+      </picker-view-column>
+      <picker-view-column class="start">
+        <view wx:for="{{minutes}}" wx:key="minutes" >{{item}}分</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+
